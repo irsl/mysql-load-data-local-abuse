@@ -6,9 +6,6 @@ use FindBin qw($Bin);
 use IO::Socket::INET;
 use IO::Select;
 
-my @files_to_steal = @ARGV;
-die "Usage: $0 file-to-steal1.txt file-to-steal2.txt ..." if(!scalar @files_to_steal);
-
 my %remaining_files_to_steal;
 
 my $listen_port = shift @ARGV;
